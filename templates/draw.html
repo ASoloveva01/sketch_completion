@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drawing App</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='draw.js') }}"></script>
+  </head>
+  <body>
+    <div>Начните рисовать</div>
+        <canvas id="canvas", name ="draw" width="400" height="400">
+            <script type="text/javascript">
+            $(document).ready(function() {
+                drawCanvas();
+            });
+            </script>
+        </canvas>
+    <button onclick="post_image()">Дорисовать</button>
+    <div>Результат</div>
+    <img id="img"/>
+    </body>
+</html>
