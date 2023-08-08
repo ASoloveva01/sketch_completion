@@ -50,8 +50,7 @@ classifier = SketchANet(num_classes=classes).to(device)
 G_optimizer = torch.optim.Adam(generator.parameters(), lr=0.01)
 D_optimizer = torch.optim.Adam(discriminator.parameters(), lr=0.01)
 epochs = 100
-'''
-training1.train_loop(generator, discriminator, classifier, G_optimizer, D_optimizer, train_dataloader,
+training.train_loop(generator, discriminator, classifier, G_optimizer, D_optimizer, train_dataloader,
                      test_dataloader,epochs)
 MODEL_PATH = Path("pretrained_models")
 MODEL_PATH.mkdir(parents=True, exist_ok=True)
@@ -61,7 +60,4 @@ MODEL_SAVE_PATH = MODEL_PATH / MODEL_NAME
 
 torch.save(obj=generator.state_dict(),
            f=MODEL_SAVE_PATH)
-'''
-mask_img, _, _ = next(iter(test_dataloader))
-print(mask_img)
 
