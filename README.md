@@ -14,7 +14,7 @@
   ```python
   pip install -r requirements.txt
   ```
-- Обучение и валидация сети 
+- Обучение и валидация модели 
   ```python
   python main.py
   ```
@@ -22,7 +22,14 @@
   ```python
   python app.py
   ```
-# Использованные источники
+# Как пользоваться
+В соответсвующем месте начните рисовать эскиз.
+![Иллюстрация к проекту](https://github.com/ASoloveva01/sketch_completion/blob/main/app.png)  
+При нажатии "Дорисовать" холст очистится и внизу появится готовый эскиз.
+![Иллюстрация к проекту](https://github.com/ASoloveva01/sketch_completion/blob/main/result.png)
+# Датасет 
+Изображения для обучения были взяты <a href="http://cybertron.cg.tu-berlin.de/eitz/projects/classifysketch/">отсюда</a>.
+# Источники
 - F. Liu, X. Deng, Y. -K. Lai, Y. -J. Liu, C. Ma and H. Wang, "SketchGAN: Joint Sketch Completion and Recognition With Generative Adversarial Network," *2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, Long Beach, CA, USA, 2019, pp. 5823-5832, doi: 10.1109/CVPR.2019.00598.
 - Yu, Q., Yang, Y., Liu, F. et al. Sketch-a-Net: A Deep Neural Network that Beats Humans. *Int J Comput Vis* 122, 411–425 (2017). https://doi.org/10.1007/s11263-016-0932-3
 
