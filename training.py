@@ -107,31 +107,17 @@ def train_loop(generator, discriminator, classifier,
                           "disc_test_loss":D_test_loss_list,"gen_test_loss":G_test_loss_list})
 
 def plot_loss_curves(results: Dict[str, List[float]]):
-    """Plots training curves of a results dictionary.
-
-    Args:
-        results (dict): dictionary containing list of values, e.g.
-            {"train_loss": [...],
-             "train_acc": [...],
-             "test_loss": [...],
-             "test_acc": [...]}
-    """
-
-    # Get the loss values of the results dictionary (training and test)
+  
     D_train_loss = results['disc_train_loss']
     G_train_loss = results['gen_train_loss']
 
-    # Get the accuracy values of the results dictionary (training and test)
     D_test_loss = results['disc_test_loss']
     G_test_loss = results['gen_test_loss']
 
-    # Figure out how many epochs there were
     epochs = range(len(results['disc_train_loss']))
 
-    # Setup a plot
     plt.figure(figsize=(15, 7))
 
-    # Plot loss
     plt.subplot(1, 2, 1)
     plt.plot(epochs, D_train_loss, label='disc_loss')
     plt.plot(epochs, G_train_loss, label='gen_loss')
@@ -139,7 +125,6 @@ def plot_loss_curves(results: Dict[str, List[float]]):
     plt.xlabel('Epochs')
     plt.legend()
 
-    # Plot accuracy
     plt.subplot(1, 2, 2)
     plt.plot(epochs, D_test_loss, label='disc_loss')
     plt.plot(epochs, G_test_loss, label='gen_loss')
